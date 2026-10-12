@@ -1,0 +1,162 @@
+[
+  {
+    "id": "jjk_b_yuji",
+    "name": "Yuji Itadori",
+    "tier": "B",
+    "character": "Yuji Itadori",
+    "worth": 5000,
+    "description": "The vessel of Sukuna. Raw strength and unyielding spirit.",
+    "image": "https://static.wikia.nocookie.net/jujutsu-kaisen/images/3/33/Yuji_Itadori.png",
+    "rarity": "Uncommon"
+  },
+  {
+    "id": "jjk_b_megumi",
+    "name": "Megumi Fushiguro",
+    "tier": "B",
+    "character": "Megumi Fushiguro",
+    "worth": 5500,
+    "description": "Master of the Ten Shadows Technique. Calm and calculating.",
+    "image": "https://static.wikia.nocookie.net/jujutsu-kaisen/images/9/96/Megumi_Fushiguro.png",
+    "rarity": "Uncommon"
+  },
+  {
+    "id": "jjk_b_nobara",
+    "name": "Nobara Kugisaki",
+    "tier": "B",
+    "character": "Nobara Kugisaki",
+    "worth": 5000,
+    "description": "Straw Doll sorceress with fierce pride and deadly precision.",
+    "image": "https://static.wikia.nocookie.net/jujutsu-kaisen/images/1/1b/Nobara_Kugisaki.png",
+    "rarity": "Uncommon"
+  },
+  {
+    "id": "jjk_b_panda",
+    "name": "Panda",
+    "tier": "B",
+    "character": "Panda",
+    "worth": 4000,
+    "description": "An Abrokta with three distinct modes. Cute but deadly.",
+    "image": "https://static.wikia.nocookie.net/jujutsu-kaisen/images/8/88/Panda.png",
+    "rarity": "Uncommon"
+  },
+  {
+    "id": "jjk_b_maki",
+    "name": "Maki Zenin",
+    "tier": "B",
+    "character": "Maki Zenin",
+    "worth": 6000,
+    "description": "A weapons master without cursed energy. Overwhelming physical power.",
+    "image": "https://static.wikia.nocookie.net/jujutsu-kaisen/images/4/4e/Maki_Zenin.png",
+    "rarity": "Uncommon"
+  },
+  {
+    "id": "jjk_a_inumaki",
+    "name": "Toge Inumaki",
+    "tier": "A",
+    "character": "Toge Inumaki",
+    "worth": 12000,
+    "description": "Speech-driven sorcerer. One word can seal your fate.",
+    "image": "https://static.wikia.nocookie.net/jujutsu-kaisen/images/6/6e/Toge_Inumaki.png",
+    "rarity": "Rare"
+  },
+  {
+    "id": "jjk_a_panda_g",
+    "name": "Panda (Gorilla Mode)",
+    "tier": "A",
+    "character": "Panda",
+    "worth": 11000,
+    "description": "Panda unleashes raw physical power in his Gorilla form.",
+    "image": "https://static.wikia.nocookie.net/jujutsu-kaisen/images/8/88/Panda.png",
+    "rarity": "Rare"
+  },
+  {
+    "id": "jjk_a_kento",
+    "name": "Kento Nanami",
+    "tier": "A",
+    "character": "Kento Nanami",
+    "worth": 15000,
+    "description": "A veteran sorcerer who left the office life behind. Ratio is 7:3.",
+    "image": "https://static.wikia.nocookie.net/jujutsu-kaisen/images/5/5e/Kento_Nanami.png",
+    "rarity": "Rare"
+  },
+  {
+    "id": "jjk_a_mahito",
+    "name": "Mahito",
+    "tier": "A",
+    "character": "Mahito",
+    "worth": 14000,
+    "description": "A sadistic curse who reshapes souls. Idle Transfiguration is his weapon.",
+    "image": "https://static.wikia.nocookie.net/jujutsu-kaisen/images/3/33/Mahito.png",
+    "rarity": "Rare"
+  },
+  {
+    "id": "jjk_s_sukuna",
+    "name": "Sukuna (Full Power)",
+    "tier": "S",
+    "character": "Ryomen Sukuna",
+    "worth": 50000,
+    "description": "The King of Curses. Even in limited form, his presence dominates.",
+    "image": "https://static.wikia.nocookie.net/jujutsu-kaisen/images/1/1b/Sukuna_full_power.png",
+    "rarity": "Epic"
+  },
+  {
+    "id": "jjk_s_gojo",
+    "name": "Satoru Gojo",
+    "tier": "S",
+    "character": "Satoru Gojo",
+    "worth": 55000,
+    "description": "The strongest sorcerer. Limitless. Six Eyes. Unmatched.",
+    "image": "https://static.wikia.nocookie.net/jujutsu-kaisen/images/3/33/Satoru_Gojo.png",
+    "rarity": "Epic"
+  },
+  {
+    "id": "jjk_s_geto",
+    "name": "Suguru Geto",
+    "tier": "S",
+    "character": "Suguru Geto",
+    "worth": 45000,
+    "description": "Former prodigy turned curse user. Command over thousands of spirits.",
+    "image": "https://static.wikia.nocookie.net/jujutsu-kaisen/images/5/5e/Suguru_Geto.png",
+    "rarity": "Epic"
+  },
+  {
+    "id": "jjk_s_jogo",
+    "name": "Jogo",
+    "tier": "S",
+    "character": "Jogo",
+    "worth": 40000,
+    "description": "A disaster curse embodying volcanoes. Proud and powerful.",
+    "image": "https://static.wikia.nocookie.net/jujutsu-kaisen/images/6/6e/Jogo.png",
+    "rarity": "Epic"
+  },
+  {
+    "id": "jjk_ss_ryomen",
+    "name": "Ryomen Sukuna (Heian Era)",
+    "tier": "SS",
+    "character": "Ryomen Sukuna",
+    "worth": 200000,
+    "description": "The legendary demon of the Heian era. The apex of cursed energy.",
+    "image": "https://static.wikia.nocookie.net/jujutsu-kaisen/images/1/1b/Sukuna_Heian.png",
+    "rarity": "Legendary"
+  },
+  {
+    "id": "jjk_ss_gojo_infinity",
+    "name": "Satoru Gojo (Hollow Purple)",
+    "tier": "SS",
+    "character": "Satoru Gojo",
+    "worth": 250000,
+    "description": "Gojo at his absolute limit. Hollow Purple erases matter from existence.",
+    "image": "https://static.wikia.nocookie.net/jujutsu-kaisen/images/3/33/Satoru_Gojo.png",
+    "rarity": "Legendary"
+  },
+  {
+    "id": "jjk_ss_kenjaku",
+    "name": "Kenjaku",
+    "tier": "SS",
+    "character": "Kenjaku",
+    "worth": 180000,
+    "description": "The mastermind behind the Shibuya Incident. Ancient and cunning.",
+    "image": "https://static.wikia.nocookie.net/jujutsu-kaisen/images/0/0e/Kenjakku.png",
+    "rarity": "Legendary"
+  }
+]

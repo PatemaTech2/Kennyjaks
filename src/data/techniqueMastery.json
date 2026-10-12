@@ -1,0 +1,479 @@
+{
+  "techniques": {
+    "Limitless": {
+      "masterySkills": [
+        {
+          "name": "Blue",
+          "description": "Attraction force that pulls the target closer.",
+          "tier": 1,
+          "requirements": [
+            { "type": "level", "amount": 5 }
+          ],
+          "effects": { "pullRange": 1, "ceCost": 40 },
+          "battleCommand": "/btq1",
+          "skillId": "blue"
+        },
+        {
+          "name": "Red",
+          "description": "Repulsive force that pushes the target away with explosive power.",
+          "tier": 2,
+          "requirements": [
+            { "type": "level", "amount": 20 },
+            { "type": "blue_mastery", "amount": 1 },
+            { "type": "black_flash", "amount": 3 }
+          ],
+          "effects": { "damageBonus": 15, "push": 2, "ceCost": 50 },
+          "battleCommand": "/btq2",
+          "skillId": "red"
+        },
+        {
+          "name": "Purple",
+          "description": "Hollow Purple — the imaginary fusion of Blue and Red.",
+          "tier": 3,
+          "requirements": [
+            { "type": "level", "amount": 40 },
+            { "type": "blue_mastery", "amount": 3 },
+            { "type": "red_mastery", "amount": 3 },
+            { "type": "curse_kill", "amount": 50 },
+            { "type": "special_grade_kill", "amount": 3 }
+          ],
+          "effects": { "damage": 60, "armorPierce": true, "ceCost": 120 },
+          "battleCommand": "/btq3",
+          "skillId": "purple"
+        },
+        {
+          "name": "Infinity",
+          "description": "Passive defense that divides space between attacks and the user.",
+          "tier": 4,
+          "requirements": [
+            { "type": "level", "amount": 25 },
+            { "type": "blue_mastery", "amount": 2 },
+            { "type": "special_grade_kill", "amount": 1 }
+          ],
+          "effects": { "damageReduction": 0.9, "dodgeChance": 0.3, "ceCost": 0 },
+          "battleCommand": null,
+          "skillId": "infinity",
+          "passive": true
+        },
+        {
+          "name": "Six Eyes",
+          "description": "Drastically improves CE efficiency, perception, and technique precision.",
+          "tier": 5,
+          "requirements": [
+            { "type": "level", "amount": 50 },
+            { "type": "purple_mastery", "amount": 5 },
+            { "type": "black_flash", "amount": 20 }
+          ],
+          "effects": { "ceEfficiency": 0.5, "accuracy": 20, "ceCost": 0 },
+          "battleCommand": null,
+          "skillId": "sixEyes",
+          "passive": true
+        }
+      ]
+    },
+    "Blood Manipulation": {
+      "masterySkills": [
+        {
+          "name": "Flowing Red Scale",
+          "description": "Harden blood to boost physical capabilities.",
+          "tier": 1,
+          "requirements": [
+            { "type": "level", "amount": 5 }
+          ],
+          "effects": { "strengthBonus": 10, "speedBonus": 5, "damageReduction": 0.15, "ceCost": 30 },
+          "battleCommand": "/btq1",
+          "skillId": "flowingRedScale"
+        },
+        {
+          "name": "Supernova",
+          "description": "Explosive blood blast that damages in a wide radius.",
+          "tier": 2,
+          "requirements": [
+            { "type": "level", "amount": 20 },
+            { "type": "flowing_red_scale_mastery", "amount": 1 },
+            { "type": "curse_kill", "amount": 25 }
+          ],
+          "effects": { "aoeDamage": 35, "push": 1, "ceCost": 60 },
+          "battleCommand": "/btq2",
+          "skillId": "supernova"
+        },
+        {
+          "name": "Piercing Blood",
+          "description": "High-velocity blood projectile with armor penetration.",
+          "tier": 3,
+          "requirements": [
+            { "type": "level", "amount": 30 },
+            { "type": "flowing_red_scale_mastery", "amount": 3 },
+            { "type": "supernova_mastery", "amount": 2 },
+            { "type": "critical_hit", "amount": 15 }
+          ],
+          "effects": { "damageBonus": 45, "armorPierce": true, "ceCost": 45 },
+          "battleCommand": "/btq3",
+          "skillId": "piercingBlood"
+        },
+        {
+          "name": "Crimson Binding",
+          "description": "Bind enemies in solidified blood tendrils.",
+          "tier": 4,
+          "requirements": [
+            { "type": "level", "amount": 35 },
+            { "type": "piercing_blood_mastery", "amount": 3 },
+            { "type": "special_grade_kill", "amount": 2 }
+          ],
+          "effects": { "slow": 0.8, "damageOverTime": 15, "ceCost": 50 },
+          "battleCommand": "/btq4",
+          "skillId": "crimsonBinding"
+        },
+        {
+          "name": "Blood Meteor",
+          "description": "Condense all blood into a massive projectile.",
+          "tier": 5,
+          "requirements": [
+            { "type": "level", "amount": 50 },
+            { "type": "crimson_binding_mastery", "amount": 3 },
+            { "type": "special_grade_kill", "amount": 5 },
+            { "type": "black_flash", "amount": 15 }
+          ],
+          "effects": { "aoeDamage": 80, "armorPierce": true, "ceCost": 100 },
+          "battleCommand": "/btq5",
+          "skillId": "bloodMeteor"
+        }
+      ]
+    },
+    "Ten Shadows Technique": {
+      "masterySkills": [
+        {
+          "name": "Shadow Step",
+          "description": "Move through shadows to reposition instantly.",
+          "tier": 1,
+          "requirements": [
+            { "type": "level", "amount": 5 }
+          ],
+          "effects": { "dodgeChance": 0.25, "ceCost": 20 },
+          "battleCommand": "/btq1",
+          "skillId": "shadowStep"
+        },
+        {
+          "name": "Divine Dogs",
+          "description": "Summon shadow dogs to attack.",
+          "tier": 2,
+          "requirements": [
+            { "type": "level", "amount": 15 },
+            { "type": "shikigami_conquered", "amount": 1 },
+            { "type": "curse_kill", "amount": 10 }
+          ],
+          "effects": { "summonDamage": 15, "summonCount": 2, "ceCost": 35 },
+          "battleCommand": "/btq2",
+          "skillId": "divineDogs"
+        },
+        {
+          "name": "Nue",
+          "description": "Summon Nue for aerial strikes.",
+          "tier": 3,
+          "requirements": [
+            { "type": "level", "amount": 25 },
+            { "type": "shikigami_conquered", "amount": 3 },
+            { "type": "black_flash", "amount": 5 }
+          ],
+          "effects": { "summonDamage": 25, "stunChance": 0.3, "ceCost": 50 },
+          "battleCommand": "/btq3",
+          "skillId": "nue"
+        },
+        {
+          "name": "Rabbit Escape",
+          "description": "Swap positions to confuse enemies.",
+          "tier": 4,
+          "requirements": [
+            { "type": "level", "amount": 35 },
+            { "type": "shikigami_conquered", "amount": 5 },
+            { "type": "critical_hit", "amount": 20 }
+          ],
+          "effects": { "swap": true, "confusionChance": 0.4, "ceCost": 30 },
+          "battleCommand": "/btq4",
+          "skillId": "rabbitEscape"
+        },
+        {
+          "name": "Ten Shadows: Domain Expansion",
+          "description": "Chimera Shadow Garden — trap all enemies in shadow realm.",
+          "tier": 5,
+          "requirements": [
+            { "type": "level", "amount": 50 },
+            { "type": "shikigami_conquered", "amount": 10 },
+            { "type": "special_grade_kill", "amount": 5 },
+            { "type": "black_flash", "amount": 20 }
+          ],
+          "effects": { "aoeDamage": 40, "immobilize": true, "ceCost": 150 },
+          "battleCommand": "/btq5",
+          "skillId": "domainExpansion"
+        }
+      ]
+    },
+    "Ratio": {
+      "masterySkills": [
+        {
+          "name": "7:3 Ratio",
+          "description": "Identify the 7:3 weak point ratio in the target.",
+          "tier": 1,
+          "requirements": [
+            { "type": "level", "amount": 5 }
+          ],
+          "effects": { "defenseReduction": 0.15, "mark": 1, "ceCost": 35 },
+          "battleCommand": "/btq1",
+          "skillId": "ratio73"
+        },
+        {
+          "name": "6:6:6:6:6",
+          "description": "Amplify the ratio — all parts attack simultaneously.",
+          "tier": 2,
+          "requirements": [
+            { "type": "level", "amount": 20 },
+            { "type": "ratio_mastery", "amount": 3 },
+            { "type": "curse_kill", "amount": 20 }
+          ],
+          "effects": { "damageBonus": 30, "attacksPerTurn": 2, "ceCost": 55 },
+          "battleCommand": "/btq2",
+          "skillId": "ratio66"
+        },
+        {
+          "name": "9:9:9:9:9",
+          "description": "Perfect ratio — devastating finishing blow.",
+          "tier": 3,
+          "requirements": [
+            { "type": "level", "amount": 35 },
+            { "type": "ratio_mastery", "amount": 5 },
+            { "type": "6_6_6_mastery", "amount": 3 },
+            { "type": "black_flash", "amount": 8 }
+          ],
+          "effects": { "damage": 55, "armorPierce": true, "stunChance": 0.5, "ceCost": 100 },
+          "battleCommand": "/btq3",
+          "skillId": "ratio99"
+        }
+      ]
+    },
+    "Projection Sorcery": {
+      "masterySkills": [
+        {
+          "name": "Frame Analysis",
+          "description": "Analyze movement frames to anticipate attacks.",
+          "tier": 1,
+          "requirements": [
+            { "type": "level", "amount": 5 }
+          ],
+          "effects": { "dodgeChance": 0.2, "accuracy": 10, "ceCost": 0 },
+          "battleCommand": null,
+          "skillId": "frameAnalysis",
+          "passive": true
+        },
+        {
+          "name": "2D Projection",
+          "description": "Create a 2D projection to confuse and attack from blind spots.",
+          "tier": 2,
+          "requirements": [
+            { "type": "level", "amount": 25 },
+            { "type": "projection_mastery", "amount": 3 },
+            { "type": "critical_hit", "amount": 15 }
+          ],
+          "effects": { "damageBonus": 20, "dodgeChance": 0.15, "ceCost": 40 },
+          "battleCommand": "/btq1",
+          "skillId": "projection2D"
+        },
+        {
+          "name": "3D Projection",
+          "description": "Create multiple 3D projections that attack in sequence.",
+          "tier": 3,
+          "requirements": [
+            { "type": "level", "amount": 40 },
+            { "type": "projection_mastery", "amount": 5 },
+            { "type": "3d_mastery", "amount": 3 },
+            { "type": "black_flash", "amount": 10 }
+          ],
+          "effects": { "damageBonus": 25, "attacksPerTurn": 2, "confusionChance": 0.3, "ceCost": 60 },
+          "battleCommand": "/btq2",
+          "skillId": "projection3D"
+        },
+        {
+          "name": "Infinity Projection",
+          "description": "Project infinitely, overwhelming the enemy with afterimages.",
+          "tier": 4,
+          "requirements": [
+            { "type": "level", "amount": 50 },
+            { "type": "projection_mastery", "amount": 7 },
+            { "type": "3d_mastery", "amount": 5 },
+            { "type": "black_flash", "amount": 15 }
+          ],
+          "effects": { "aoeDamage": 45, "confusionChance": 0.6, "ceCost": 100 },
+          "battleCommand": "/btq3",
+          "skillId": "infinityProjection"
+        }
+      ]
+    },
+    "Boogie Woogie": {
+      "masterySkills": [
+        {
+          "name": "Clap Swap",
+          "description": "Swap positions with a marked target using a clap.",
+          "tier": 1,
+          "requirements": [
+            { "type": "level", "amount": 5 }
+          ],
+          "effects": { "swap": true, "stunChance": 0.25, "ceCost": 30 },
+          "battleCommand": "/btq1",
+          "skillId": "clapSwap"
+        },
+        {
+          "name": "Double Clap",
+          "description": "Swap with two targets simultaneously.",
+          "tier": 2,
+          "requirements": [
+            { "type": "level", "amount": 20 },
+            { "type": "boogie_mastery", "amount": 3 },
+            { "type": "pvp_win", "amount": 5 }
+          ],
+          "effects": { "swap": true, "confusionChance": 0.4, "damageBonus": 20, "ceCost": 50 },
+          "battleCommand": "/btq2",
+          "skillId": "doubleClap"
+        },
+        {
+          "name": "Triple Clap Feint",
+          "description": "Three consecutive swaps ending with a devastating counterattack.",
+          "tier": 3,
+          "requirements": [
+            { "type": "level", "amount": 35 },
+            { "type": "boogie_mastery", "amount": 5 },
+            { "type": "double_clap_mastery", "amount": 3 },
+            { "type": "critical_hit", "amount": 20 }
+          ],
+          "effects": { "swap": true, "damageBonus": 40, "criticalChance": 0.3, "ceCost": 70 },
+          "battleCommand": "/btq3",
+          "skillId": "tripleClapFeint"
+        }
+      ]
+    },
+    "Chimera Shadow Garden": {
+      "masterySkills": [
+        {
+          "name": "Shadow Lurk",
+          "description": "Merge with shadows to become untargetable.",
+          "tier": 1,
+          "requirements": [
+            { "type": "level", "amount": 5 }
+          ],
+          "effects": { "dodgeChance": 1.0, "ceRegen": 20, "ceCost": 30 },
+          "battleCommand": "/btq1",
+          "skillId": "shadowLurk"
+        },
+        {
+          "name": "Shadow Tendrils",
+          "description": "Lash out with shadow appendages.",
+          "tier": 2,
+          "requirements": [
+            { "type": "level", "amount": 20 },
+            { "type": "shadow_mastery", "amount": 3 },
+            { "type": "curse_kill", "amount": 15 }
+          ],
+          "effects": { "damageBonus": 30, "slowChance": 0.5, "ceCost": 45 },
+          "battleCommand": "/btq2",
+          "skillId": "shadowTendrils"
+        },
+        {
+          "name": "Shadow Garden: Convergence",
+          "description": "All shadows converge into a single devastating strike.",
+          "tier": 3,
+          "requirements": [
+            { "type": "level", "amount": 35 },
+            { "type": "shadow_mastery", "amount": 5 },
+            { "type": "tendrils_mastery", "amount": 3 },
+            { "type": "special_grade_kill", "amount": 3 }
+          ],
+          "effects": { "aoeDamage": 50, "ceToDamage": 30, "ceCost": 100 },
+          "battleCommand": "/btq3",
+          "skillId": "shadowGardenConvergence"
+        }
+      ]
+    },
+    "Disaster Curse": {
+      "masterySkills": [
+        {
+          "name": "Storm Vortex",
+          "description": "Summon a vortex of wind and debris.",
+          "tier": 1,
+          "requirements": [
+            { "type": "level", "amount": 5 }
+          ],
+          "effects": { "aoeDamage": 20, "pull": 1, "ceCost": 40 },
+          "battleCommand": "/btq1",
+          "skillId": "stormVortex"
+        },
+        {
+          "name": "Pressure Cascade",
+          "description": "Crushing pressure damages and slows enemies.",
+          "tier": 2,
+          "requirements": [
+            { "type": "level", "amount": 20 },
+            { "type": "disaster_mastery", "amount": 3 },
+            { "type": "curse_kill", "amount": 20 }
+          ],
+          "effects": { "damageOverTime": 15, "slowChance": 0.6, "ceCost": 55 },
+          "battleCommand": "/btq2",
+          "skillId": "pressureCascade"
+        },
+        {
+          "name": "Cataclysm",
+          "description": "Unleash a massive storm that devastates the battlefield.",
+          "tier": 3,
+          "requirements": [
+            { "type": "level", "amount": 40 },
+            { "type": "disaster_mastery", "amount": 5 },
+            { "type": "cascade_mastery", "amount": 3 },
+            { "type": "special_grade_kill", "amount": 3 }
+          ],
+          "effects": { "aoeDamage": 70, "armorPierce": true, "ceCost": 120 },
+          "battleCommand": "/btq3",
+          "skillId": "cataclysm"
+        }
+      ]
+    },
+    "Awakening": {
+      "masterySkills": [
+        {
+          "name": "Burst Growth",
+          "description": "Surge with cursed energy to boost all stats.",
+          "tier": 1,
+          "requirements": [
+            { "type": "level", "amount": 5 }
+          ],
+          "effects": { "strengthBonus": 15, "speedBonus": 10, "damageBonus": 25, "ceCost": 40 },
+          "battleCommand": "/btq1",
+          "skillId": "burstGrowth"
+        },
+        {
+          "name": "Energy Body",
+          "description": "Transform partially into pure cursed energy.",
+          "tier": 2,
+          "requirements": [
+            { "type": "level", "amount": 25 },
+            { "type": "awakening_mastery", "amount": 3 },
+            { "type": "black_flash", "amount": 5 }
+          ],
+          "effects": { "dodgeChance": 0.35, "damageReduction": 0.3, "ceCost": 60 },
+          "battleCommand": "/btq2",
+          "skillId": "energyBody"
+        },
+        {
+          "name": "Limit Break",
+          "description": "Break through your limits into awakened mastery.",
+          "tier": 3,
+          "requirements": [
+            { "type": "level", "amount": 40 },
+            { "type": "awakening_mastery", "amount": 5 },
+            { "type": "energy_body_mastery", "amount": 3 },
+            { "type": "special_grade_kill", "amount": 3 }
+          ],
+          "effects": { "damageBonus": 60, "criticalChance": 0.4, "damageReduction": 0.2, "ceCost": 100 },
+          "battleCommand": "/btq3",
+          "skillId": "limitBreak"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "Limitless": {
+    "name": "Unlimited Void",
+    "sureHit": "All technique attacks become sure-hit and freeze enemy reaction.",
+    "description": "An endless void of boundless information. The enemy is paralyzed by infinite data.",
+    "battleEffect": { "sureHit": true, "skipEnemyTurnChance": 0.5, "damageMult": 1.6, "rounds": 3 },
+    "ceCost": 300
+  },
+  "Blood Manipulation": {
+    "name": "Crimson Blood Palace",
+    "sureHit": "Blood attacks become sure-hit and crystallize the enemy's cursed energy.",
+    "description": "A Palace of coagulated blood. Every drop answers to you.",
+    "battleEffect": { "sureHit": true, "bleedPerTurn": 0.12, "damageMult": 1.5, "rounds": 3 },
+    "ceCost": 280
+  },
+  "Ten Shadows Technique": {
+    "name": "Chimera Shadow Garden",
+    "sureHit": "Every conquered shikigami attacks simultaneously as sure-hit ambushes.",
+    "description": "A living garden of shadow where all your shikigami hunt as one.",
+    "battleEffect": { "sureHit": true, "shikigamiSwarm": true, "damageMult": 1.8, "rounds": 3 },
+    "ceCost": 320
+  },
+  "Ratio": {
+    "name": "Idle Death Gamble",
+    "sureHit": "Strikes always land on the perfect 7:3 ratio weak point.",
+    "description": "The gamble of fate. The odds always favor you.",
+    "battleEffect": { "sureHit": true, "critChance": 0.4, "damageMult": 1.7, "rounds": 3 },
+    "ceCost": 260
+  },
+  "Projection Sorcery": {
+    "name": "Time Cell Moon Palace",
+    "sureHit": "Movement becomes 24fps-perfect; every frame strikes as a sure hit.",
+    "description": "A palace where time itself moves at your frame rate.",
+    "battleEffect": { "sureHit": true, "extraAction": true, "damageMult": 1.5, "rounds": 3 },
+    "ceCost": 270
+  },
+  "Boogie Woogie": {
+    "name": "Endless Exchange Hall",
+    "sureHit": "Unlimited clap-swaps let every strike land from impossible angles.",
+    "description": "A hall of infinite claps. Position is an illusion.",
+    "battleEffect": { "sureHit": true, "dodgeBoost": 0.4, "damageMult": 1.5, "rounds": 3 },
+    "ceCost": 250
+  },
+  "Chimera Shadow Garden": {
+    "name": "Garden of the Black Divine",
+    "sureHit": "Shadow tendrils erupt from every surface as sure hits.",
+    "description": "A garden where shadow is the only law.",
+    "battleEffect": { "sureHit": true, "rootEnemy": true, "damageMult": 1.55, "rounds": 3 },
+    "ceCost": 260
+  },
+  "Disaster Curse": {
+    "name": "Calamity Temple",
+    "sureHit": "Natural disaster strikes become inevitable and sure-hit.",
+    "description": "A temple where catastrophe is eternal.",
+    "battleEffect": { "sureHit": true, "aoe": true, "damageMult": 1.6, "rounds": 3 },
+    "ceCost": 300
+  },
+  "Awakening": {
+    "name": "Origin of Creation",
+    "sureHit": "Your awakened strike manifests as a sure-hit conceptual blow.",
+    "description": "The source from which all technique flows.",
+    "battleEffect": { "sureHit": true, "damageMult": 2.0, "rounds": 3 },
+    "ceCost": 340
+  }
+}

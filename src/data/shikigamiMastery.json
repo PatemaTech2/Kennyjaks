@@ -1,0 +1,201 @@
+{
+  "shikigami": [
+    {
+      "id": "divine-dogs",
+      "name": "Divine Dogs",
+      "emoji": "🐺",
+      "order": 1,
+      "description": "Two divine canine familiars that track and attack with relentless precision.",
+      "abilities": ["Fast Melee", "Pack Hunt", "Fang Rush"],
+      "baseStats": { "hp": 200, "attack": 35, "defense": 15, "speed": 40 },
+      "scaledStats": { "hp": 20, "attack": 7, "defense": 3, "speed": 12 },
+      "ceCost": 30,
+      "cooldown": 1,
+      "statusEffect": { "type": "bleed", "durationTurns": 2, "amount": 8 },
+      "conquestRequirement": {
+        "type": "direct",
+        "description": "Defeat Divine Dogs at 10% power in ritual combat"
+      }
+    },
+    {
+      "id": "nue",
+      "name": "Nue",
+      "emoji": "🦅",
+      "order": 2,
+      "description": "A winged shikigami that unleashes lightning from the sky.",
+      "abilities": ["Flight", "Lightning Bolt", "Electric Discharge"],
+      "baseStats": { "hp": 250, "attack": 42, "defense": 18, "speed": 38 },
+      "scaledStats": { "hp": 25, "attack": 8, "defense": 4, "speed": 11 },
+      "ceCost": 40,
+      "cooldown": 2,
+      "statusEffect": { "type": "stun", "durationTurns": 1, "chance": 25 },
+      "conquestRequirement": {
+        "type": "prerequisite",
+        "prereqId": "divine-dogs",
+        "description": "Must conquer Divine Dogs first, then defeat Nue at 10% power"
+      }
+    },
+    {
+      "id": "great-serpent",
+      "name": "Great Serpent",
+      "emoji": "🐍",
+      "order": 3,
+      "description": "A massive serpentine shikigami that constricts and crushes its prey.",
+      "abilities": ["Constriction", "Venom", "Coil"],
+      "baseStats": { "hp": 320, "attack": 48, "defense": 25, "speed": 20 },
+      "scaledStats": { "hp": 32, "attack": 9, "defense": 5, "speed": 6 },
+      "ceCost": 50,
+      "cooldown": 2,
+      "statusEffect": { "type": "slow", "durationTurns": 2, "amount": 0.3 },
+      "conquestRequirement": {
+        "type": "prerequisite",
+        "prereqId": "nue",
+        "description": "Must conquer Nue first, then defeat Great Serpent at 10% power"
+      }
+    },
+    {
+      "id": "toad",
+      "name": "Toad",
+      "emoji": "🐸",
+      "order": 4,
+      "description": "An amphibious shikigami that absorbs cursed energy and launches counterattacks.",
+      "abilities": ["Cursed Absorption", "Tongue Lash", "Swamp"],
+      "baseStats": { "hp": 280, "attack": 30, "defense": 28, "speed": 22 },
+      "scaledStats": { "hp": 28, "attack": 6, "defense": 6, "speed": 7 },
+      "ceCost": 45,
+      "cooldown": 2,
+      "statusEffect": { "type": "slow", "durationTurns": 1, "amount": 0.2 },
+      "conquestRequirement": {
+        "type": "prerequisite",
+        "prereqId": "great-serpent",
+        "description": "Must conquer Great Serpent first, then defeat Toad at 10% power"
+      }
+    },
+    {
+      "id": "rabbit-escape",
+      "name": "Rabbit Escape",
+      "emoji": "🐰",
+      "order": 5,
+      "description": "A fleet-footed shikigami that confuses enemies and creates escape routes.",
+      "abilities": ["Confusion", "Evasion", "Escape Route"],
+      "baseStats": { "hp": 180, "attack": 25, "defense": 12, "speed": 55 },
+      "scaledStats": { "hp": 18, "attack": 5, "defense": 2, "speed": 16 },
+      "ceCost": 35,
+      "cooldown": 1,
+      "statusEffect": { "type": "confusion", "durationTurns": 1, "chance": 30 },
+      "conquestRequirement": {
+        "type": "prerequisite",
+        "prereqId": "toad",
+        "description": "Must conquer Toad first, then defeat Rabbit Escape at 10% power"
+      }
+    },
+    {
+      "id": "max-elephant",
+      "name": "Max Elephant",
+      "emoji": "🐘",
+      "order": 6,
+      "description": "A heavyweight shikigami that crushes enemies with water and massive force.",
+      "abilities": ["Water Cannon", "Trample", "Torrent"],
+      "baseStats": { "hp": 400, "attack": 55, "defense": 35, "speed": 18 },
+      "scaledStats": { "hp": 40, "attack": 10, "defense": 7, "speed": 5 },
+      "ceCost": 60,
+      "cooldown": 3,
+      "statusEffect": { "type": "defense_down", "durationTurns": 2, "amount": 0.2 },
+      "conquestRequirement": {
+        "type": "prerequisite",
+        "prereqId": "rabbit-escape",
+        "description": "Must conquer Rabbit Escape first, then defeat Max Elephant at 10% power"
+      }
+    },
+    {
+      "id": "round-deer",
+      "name": "Round Deer",
+      "emoji": "🦌",
+      "order": 7,
+      "description": "A holy shikigami that purifies cursed energy and heals allies.",
+      "abilities": ["Healing Light", "Purification", "Divine Antlers"],
+      "baseStats": { "hp": 350, "attack": 32, "defense": 30, "speed": 28 },
+      "scaledStats": { "hp": 35, "attack": 6, "defense": 6, "speed": 8 },
+      "ceCost": 55,
+      "cooldown": 3,
+      "statusEffect": { "type": "heal", "amount": 0.3 },
+      "conquestRequirement": {
+        "type": "prerequisite",
+        "prereqId": "max-elephant",
+        "description": "Must conquer Max Elephant first, then defeat Round Deer at 10% power"
+      }
+    },
+    {
+      "id": "piercing-ox",
+      "name": "Piercing Ox",
+      "emoji": "🐂",
+      "order": 8,
+      "description": "A powerful bovine shikigami that charges through everything in its path.",
+      "abilities": ["Charge", "Momentum", "Unstoppable"],
+      "baseStats": { "hp": 450, "attack": 60, "defense": 30, "speed": 35 },
+      "scaledStats": { "hp": 45, "attack": 11, "defense": 6, "speed": 10 },
+      "ceCost": 70,
+      "cooldown": 3,
+      "statusEffect": null,
+      "conquestRequirement": {
+        "type": "prerequisite",
+        "prereqId": "round-deer",
+        "description": "Must conquer Round Deer first, then defeat Piercing Ox at 10% power"
+      }
+    },
+    {
+      "id": "tiger-funeral",
+      "name": "Tiger Funeral",
+      "emoji": "🐯",
+      "order": 9,
+      "description": "A death omen shikigami whose roar withers enemies and heralds demise.",
+      "abilities": ["Death Howl", "Predator's Gaze", "Claw Barrage"],
+      "baseStats": { "hp": 420, "attack": 55, "defense": 28, "speed": 42 },
+      "scaledStats": { "hp": 42, "attack": 10, "defense": 6, "speed": 12 },
+      "ceCost": 75,
+      "cooldown": 3,
+      "statusEffect": { "type": "fear", "durationTurns": 1, "amount": 0.25 },
+      "conquestRequirement": {
+        "type": "prerequisite",
+        "prereqId": "piercing-ox",
+        "description": "Must conquer Piercing Ox first, then defeat Tiger Funeral at 10% power"
+      }
+    },
+    {
+      "id": "mourning-tiger",
+      "name": "Mourning Tiger",
+      "emoji": "🐅",
+      "order": 10,
+      "description": "A spectral tiger born from grief, striking with phantasmal claws.",
+      "abilities": ["Phantom Claws", "Mourning Wail", "Grim Step"],
+      "baseStats": { "hp": 500, "attack": 62, "defense": 32, "speed": 48 },
+      "scaledStats": { "hp": 50, "attack": 12, "defense": 6, "speed": 14 },
+      "ceCost": 80,
+      "cooldown": 3,
+      "statusEffect": { "type": "fear", "durationTurns": 1, "amount": 0.35 },
+      "conquestRequirement": {
+        "type": "prerequisite",
+        "prereqId": "tiger-funeral",
+        "description": "Must conquer Tiger Funeral first, then defeat Mourning Tiger at 10% power"
+      }
+    },
+    {
+      "id": "mahoraga",
+      "name": "Mahoraga",
+      "emoji": "🐉",
+      "order": 11,
+      "description": "The supreme divine general who adapts to any and all techniques. Defeating this shikigami at 10% power grants the pinnacle of the Ten Shadows.",
+      "abilities": ["Adaptation", "Divine Aegis", "Regeneration", "Sword of Extermination", "Wheel of Fortune"],
+      "baseStats": { "hp": 2000, "attack": 90, "defense": 65, "speed": 45 },
+      "scaledStats": { "hp": 200, "attack": 18, "defense": 13, "speed": 12 },
+      "ceCost": 150,
+      "cooldown": 5,
+      "statusEffect": null,
+      "conquestRequirement": {
+        "type": "mahoraga",
+        "prereqId": "mourning-tiger",
+        "description": "Must conquer Mourning Tiger first. Then survive and defeat Mahoraga at 10% power. Requires: Grade Special, 1000 curse kills, all previous shikigami conquered."
+      }
+    }
+  ]
+}

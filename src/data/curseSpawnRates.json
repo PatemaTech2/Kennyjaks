@@ -1,0 +1,53 @@
+{
+  "baseline": {
+    "specialGradePlus": 2,
+    "specialGrade": 8,
+    "grade1": 15,
+    "grade2": 20,
+    "grade3": 25,
+    "grade4": 30
+  },
+  "playerScaled": {
+    "beginner": {
+      "levelRange": [1, 14],
+      "adjustments": {
+        "specialGradePlus": -1.5,
+        "specialGrade": -3,
+        "grade1": -5,
+        "grade2": 0,
+        "grade3": 5,
+        "grade4": 5
+      }
+    },
+    "midGame": {
+      "levelRange": [15, 39],
+      "adjustments": {
+        "specialGradePlus": 1,
+        "specialGrade": 3,
+        "grade1": 3,
+        "grade2": -2,
+        "grade3": -3,
+        "grade4": -2
+      }
+    },
+    "highLevel": {
+      "levelRange": [40, 100],
+      "adjustments": {
+        "specialGradePlus": 3,
+        "specialGrade": 5,
+        "grade1": 5,
+        "grade2": -3,
+        "grade3": -5,
+        "grade4": -5
+      }
+    }
+  },
+  "minimumChance": {
+    "specialGradePlus": 0.5,
+    "specialGrade": 1,
+    "grade1": 3,
+    "grade2": 5,
+    "grade3": 10,
+    "grade4": 15
+  }
+}

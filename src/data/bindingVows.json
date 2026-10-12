@@ -1,0 +1,90 @@
+{
+  "bindingVows": [
+    {
+      "id": "black-and-white",
+      "name": "Black-and-White",
+      "description": "Forces cursed-energy output toward its maximum potential. Increases technique damage based on grade.",
+      "hpCost": 200,
+      "ceCost": 0,
+      "effects": {
+        "damageMultiplier": 2.0,
+        "gradeScaling": true,
+        "techniqueControlBonus": 0.1
+      },
+      "requirements": {
+        "minGrade": 4,
+        "minTechniqueControl": 10
+      },
+      "failureBehavior": {
+        "hpRefund": false,
+        "ceRefund": false,
+        "selfDamage": 50
+      }
+    },
+    {
+      "id": "red-meets-blue",
+      "name": "Red-Meets-Blue",
+      "description": "Expands the effective attack radius. Technique can still connect even if the opponent attempts to flee.",
+      "hpCost": 429,
+      "ceCost": 0,
+      "effects": {
+        "attackRange": 1,
+        "fleeInteraction": "ignore_flee",
+        "techniqueControlBonus": 0.15
+      },
+      "requirements": {
+        "minGrade": 3,
+        "minTechniqueControl": 20
+      },
+      "failureBehavior": {
+        "hpRefund": false,
+        "ceRefund": false,
+        "selfDamage": 100
+      }
+    },
+    {
+      "id": "crow-and-shinmio",
+      "name": "Crow-and-Shinmio",
+      "description": "Compresses the technique's charge and release time. Allows technique to execute faster.",
+      "hpCost": 1000,
+      "ceCost": 0,
+      "effects": {
+        "chargeReduction": 1.0,
+        "releaseDelay": 0,
+        "techniqueControlBonus": 0.2
+      },
+      "requirements": {
+        "minGrade": 2,
+        "minTechniqueControl": 40
+      },
+      "failureBehavior": {
+        "hpRefund": false,
+        "ceRefund": false,
+        "selfDamage": 300
+      }
+    },
+    {
+      "id": "the-goat",
+      "name": "THE-GOAT",
+      "description": "Pushes the technique toward its absolute maximum output and execution quality. The strongest Binding Vow.",
+      "hpCost": "variable",
+      "ceCost": 0,
+      "effects": {
+        "damageMultiplier": 2.5,
+        "penetration": true,
+        "stability": 1.0,
+        "executionQuality": 1.0,
+        "techniqueControlBonus": 0.3
+      },
+      "requirements": {
+        "minGrade": 1,
+        "minTechniqueControl": 60
+      },
+      "failureBehavior": {
+        "hpRefund": false,
+        "ceRefund": false,
+        "selfDamage": 500
+      }
+    }
+  ]
+}

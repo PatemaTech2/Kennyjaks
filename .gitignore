@@ -1,0 +1,24 @@
+# Secrets and credentials
+owner.json
+owner.json.*
+.env
+.env.*
+
+# Database
+database/players/
+*.json
+telegramLinks.json
+
+# Logs
+logs/
+*.log
+
+# Node modules
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build output
+dist/

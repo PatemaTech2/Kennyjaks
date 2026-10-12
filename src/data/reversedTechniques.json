@@ -1,0 +1,267 @@
+{
+  "version": "2.16.0",
+  "techniques": {
+    "Limitless": {
+      "reverseTechnique": "Reverse Limitless",
+      "reverseName": "Reverse Limitless",
+      "damage": 60,
+      "ceCost": 250,
+      "cooldown": 120,
+      "cooldownUnit": "seconds",
+      "effects": ["Repels target", "Reduces target CE by 30%", "Stun for 1 turn"],
+      "battleDialogue": "Reality bends — negative space repels and tears at existence.",
+      "statusEffect": {
+        "type": "repel_stun",
+        "durationTurns": 1
+      }
+    },
+    "Infinity": {
+      "reverseTechnique": "Void Collapse",
+      "reverseName": "Void Collapse",
+      "damage": 45,
+      "ceCost": 200,
+      "cooldown": 90,
+      "cooldownUnit": "seconds",
+      "effects": ["Collapses space inward", "Deals area damage", "Reduces target accuracy by 25%"],
+      "battleDialogue": "The infinite void collapses inward, crushing all in its path.",
+      "statusEffect": {
+        "type": "blindness",
+        "durationTurns": 2
+      }
+    },
+    "Blue": {
+      "reverseTechnique": "Reverse Blue",
+      "reverseName": "Reverse Blue",
+      "damage": 50,
+      "ceCost": 180,
+      "cooldown": 60,
+      "cooldownUnit": "seconds",
+      "effects": ["Reverse attraction pulls inward", "Drains 20% CE from target", "Heals user for 30% of damage dealt"],
+      "battleDialogue": "The reversed blue tear pulls the target into a singularity of negative energy.",
+      "statusEffect": null
+    },
+    "Red": {
+      "reverseTechnique": "Reverse Red",
+      "reverseName": "Reverse Red",
+      "damage": 55,
+      "ceCost": 200,
+      "cooldown": 60,
+      "cooldownUnit": "seconds",
+      "effects": ["Reverse repulsion pushes with negative force", "Knockback", "Reduces target speed by 30% for 2 turns"],
+      "battleDialogue": "The reversed red explodes inward, collapsing the target's defenses.",
+      "statusEffect": {
+        "type": "slow",
+        "durationTurns": 2
+      }
+    },
+    "Purple": {
+      "reverseTechnique": "Reverse Purple",
+      "reverseName": "Reverse Purple",
+      "damage": 80,
+      "ceCost": 300,
+      "cooldown": 150,
+      "cooldownUnit": "seconds",
+      "effects": ["Combines reversed blue and red", "Massive damage", "Removes all buffs from target"],
+      "battleDialogue": "The reversed hollow purple tears through reality itself.",
+      "statusEffect": null
+    },
+    "Hollow Purple": {
+      "reverseTechnique": "Reverse Hollow Purple",
+      "reverseName": "Reverse Hollow Purple",
+      "damage": 80,
+      "ceCost": 300,
+      "cooldown": 150,
+      "cooldownUnit": "seconds",
+      "effects": ["Combines reversed blue and red", "Massive damage", "Removes all buffs from target"],
+      "battleDialogue": "The reversed hollow purple tears through reality itself.",
+      "statusEffect": null
+    },
+    "Blood Manipulation": {
+      "reverseTechnique": "Blood Reversal",
+      "reverseName": "Blood Reversal",
+      "damage": 40,
+      "ceCost": 150,
+      "cooldown": 60,
+      "cooldownUnit": "seconds",
+      "effects": ["Steals HP from target", "Heals user for 150% of damage dealt", "Applies bleed to target"],
+      "battleDialogue": "The reverse blood technique siphons life force directly from the enemy.",
+      "statusEffect": {
+        "type": "bleed",
+        "durationTurns": 3
+      }
+    },
+    "Crimson Flow": {
+      "reverseTechnique": "Azure Flow",
+      "reverseName": "Azure Flow",
+      "damage": 0,
+      "ceCost": 100,
+      "cooldown": 45,
+      "cooldownUnit": "seconds",
+      "effects": ["Restores 40% of max HP", "Removes negative status effects", "Increases defense by 20% for 3 turns"],
+      "battleDialogue": "Azure energy flows through the body, reversing blood flow and restoring vitality.",
+      "statusEffect": {
+        "type": "defense_boost",
+        "durationTurns": 3
+      }
+    },
+    "Piercing Blood": {
+      "reverseTechnique": "Coagulated Blood",
+      "reverseName": "Coagulated Blood",
+      "damage": 35,
+      "ceCost": 120,
+      "cooldown": 50,
+      "cooldownUnit": "seconds",
+      "effects": ["Slows target by 40%", "Cannot be blocked", "Reduces target CE regeneration"],
+      "battleDialogue": "Thickened reverse blood coats the target, slowing their cursed energy flow.",
+      "statusEffect": {
+        "type": "slow",
+        "durationTurns": 3
+      }
+    },
+    "Ten Shadows Technique": {
+      "reverseTechnique": "Void Shadows",
+      "reverseName": "Void Shadows",
+      "damage": 50,
+      "ceCost": 200,
+      "cooldown": 90,
+      "cooldownUnit": "seconds",
+      "effects": ["Shadows drain target's life", "Heals user for 100% of damage", "Target cannot use techniques for 1 turn"],
+      "battleDialogue": "The shadows reverse — they consume the enemy's very essence.",
+      "statusEffect": {
+        "type": "technique_lock",
+        "durationTurns": 1
+      }
+    },
+    "Divine Dogs": {
+      "reverseTechnique": "Void Hounds",
+      "reverseName": "Void Hounds",
+      "damage": 30,
+      "ceCost": 100,
+      "cooldown": 45,
+      "cooldownUnit": "seconds",
+      "effects": ["Shadow hounds drain CE on hit", "2 attacks", "Each hit reduces target CE by 15%"],
+      "battleDialogue": "The shadow hounds emerge from the void, draining cursed energy with each bite.",
+      "statusEffect": null
+    },
+    "Ratio": {
+      "reverseTechnique": "Fracture",
+      "reverseName": "Fracture",
+      "damage": 55,
+      "ceCost": 180,
+      "cooldown": 75,
+      "cooldownUnit": "seconds",
+      "effects": ["Reverses the ratio of damage", "Deals 250% of target's last damage dealt to them", "High crit chance"],
+      "battleDialogue": "The ratio is reversed — you take the damage you just dealt, amplified.",
+      "statusEffect": null
+    },
+    "Cursed Technique Reversal: Red": {
+      "reverseTechnique": "Negative Red",
+      "reverseName": "Negative Red",
+      "damage": 60,
+      "ceCost": 200,
+      "cooldown": 60,
+      "cooldownUnit": "seconds",
+      "effects": ["Reverse repulsion", "Massive pushback", "Target loses 25% max HP as recoil"],
+      "battleDialogue": "The reverse red collapses all force into a singularity of negative pressure.",
+      "statusEffect": {
+        "type": "weaken",
+        "durationTurns": 2
+      }
+    },
+    "Cursed Technique Lapse: Blue": {
+      "reverseTechnique": "Reverse Blue",
+      "reverseName": "Reverse Blue",
+      "damage": 50,
+      "ceCost": 180,
+      "cooldown": 60,
+      "cooldownUnit": "seconds",
+      "effects": ["Reverse attraction pulls inward", "Drains 20% CE from target", "Heals user for 30% of damage dealt"],
+      "battleDialogue": "The reversed blue tear pulls the target into a singularity of negative energy.",
+      "statusEffect": null
+    },
+    "Projection Sorcery": {
+      "reverseTechnique": "Time Collapse",
+      "reverseName": "Time Collapse",
+      "damage": 45,
+      "ceCost": 180,
+      "cooldown": 70,
+      "cooldownUnit": "seconds",
+      "effects": ["Reverses time perception", "Acts first next turn", "Target's next technique deals 50% damage"],
+      "battleDialogue": "Time reverses — the target experiences their next action before they think to do it.",
+      "statusEffect": {
+        "type": "damage_reduction",
+        "durationTurns": 1
+      }
+    },
+    "Boogie Woogie": {
+      "reverseTechnique": "Reverse Swap",
+      "reverseName": "Reverse Swap",
+      "damage": 40,
+      "ceCost": 150,
+      "cooldown": 40,
+      "cooldownUnit": "seconds",
+      "effects": ["Swaps positions with target", "Confuses target (miss chance 50%)", "Steals one item from target inventory"],
+      "battleDialogue": "The reverse swap tears space — positions invert and the enemy's focus shatters.",
+      "statusEffect": {
+        "type": "confusion",
+        "durationTurns": 2
+      }
+    },
+    "Chimera Shadow Garden": {
+      "reverseTechnique": "Ethereal Garden",
+      "reverseName": "Ethereal Garden",
+      "damage": 55,
+      "ceCost": 220,
+      "cooldown": 100,
+      "cooldownUnit": "seconds",
+      "effects": ["Shadows become intangible", "Deals damage over time for 3 turns", "Target cannot heal"],
+      "battleDialogue": "The garden reverses — shadows consume light itself, leaving only decay.",
+      "statusEffect": {
+        "type": "no_heal",
+        "durationTurns": 3
+      }
+    },
+    "Disaster Curse": {
+      "reverseTechnique": "Desolation",
+      "reverseName": "Desolation",
+      "damage": 65,
+      "ceCost": 250,
+      "cooldown": 90,
+      "cooldownUnit": "seconds",
+      "effects": ["Reverses the curse's domain", "Massive area damage", "All targets take 15% damage per turn for 2 turns"],
+      "battleDialogue": "The disaster reverses — calamity flows backward, and all must suffer.",
+      "statusEffect": {
+        "type": "burn",
+        "durationTurns": 2
+      }
+    },
+    "Awakening": {
+      "reverseTechnique": "Devolution",
+      "reverseName": "Devolution",
+      "damage": 50,
+      "ceCost": 200,
+      "cooldown": 80,
+      "cooldownUnit": "seconds",
+      "effects": ["Reverses evolution back to primal state", "Resets target technique progress", "Deals true damage ignoring defense"],
+      "battleDialogue": "Evolution reverses — the target's body regresses to a primitive, vulnerable state.",
+      "statusEffect": {
+        "type": "weaken",
+        "durationTurns": 3
+      }
+    },
+    "Cursed Speech": {
+      "reverseTechnique": "Reverse Speech",
+      "reverseName": "Reverse Speech",
+      "damage": 0,
+      "ceCost": 150,
+      "cooldown": 50,
+      "cooldownUnit": "seconds",
+      "effects": ["Commands target to heal allies", "Restores 25% max HP to all allies", "Target cannot attack next turn"],
+      "battleDialogue": "The reverse speech compels the enemy to mend what they once tore asunder.",
+      "statusEffect": {
+        "type": "stun",
+        "durationTurns": 1
+      }
+    }
+  }
+}
