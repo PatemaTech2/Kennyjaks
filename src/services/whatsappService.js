@@ -57,43 +57,38 @@ export async function startWhatsApp(onMessage, onGroupJoin) {
 
   let qrDisplayed = false
   let pairingDone = false
+  let pendingChoice = false
 
   sock.ev.on("connection.update", async (update) => {
     const { connection, lastDisconnect, qr, registered } = update
 
-    if (!registered && !pairingDone) {
-      if (!qrDisplayed) {
-        qrDisplayed = true
-        console.log(chalk.cyan.bold("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"))
-        console.log(chalk.cyan.bold(BOT_NAME))
-        console.log(chalk.cyan.bold("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"))
-        console.log(chalk.yellow("Not registered with WhatsApp. Choose auth method:"))
-        console.log(chalk.green("  1) QR Code (default)"))
-        console.log(chalk.green("  2) Pairing Code"))
-        const choice = await question("Enter choice (1 or 2): ")
-
-        if (choice.trim().toLowerCase() === "2") {
-          const phoneNumber = await question("Enter your phone number (with country code, e.g., 911234567890): ")
-          await generatePairingCode(sock, phoneNumber.trim())
-          pairingDone = true
-        } else {
-          qrDisplayed = false
-        }
-      }
-    }
-
-    if (qr && !qrDisplayed && !pairingDone) {
+    if (qr && !qrDisplayed && !pairingDone && !pendingChoice) {
+      pendingChoice = true
       qrDisplayed = true
       console.log(chalk.cyan.bold("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"))
       console.log(chalk.cyan.bold(BOT_NAME))
       console.log(chalk.cyan.bold("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"))
-      console.log(chalk.yellow("Connecting..."))
-      console.log(chalk.gray("██████████████"))
-      console.log(chalk.yellow("Scan QR Code"))
-      console.log("")
-      qrcode.generate(qr, { small: true })
-      console.log("")
-      console.log(chalk.cyan.bold("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"))
+      console.log(chalk.yellow("Not registered with WhatsApp. Choose auth method:"))
+      console.log(chalk.green("  1) QR Code (default)"))
+      console.log(chalk.green("  2) Pairing Code"))
+      const choice = await question("Enter choice (1 or 2): ")
+
+      if (choice.trim().toLowerCase() === "2") {
+        const phoneNumber = await question("Enter your phone number (with country code, e.g., 911234567890): ")
+        await generatePairingCode(sock, phoneNumber.trim())
+        pairingDone = true
+      } else {
+        console.log(chalk.cyan.bold("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"))
+        console.log(chalk.cyan.bold(BOT_NAME))
+        console.log(chalk.cyan.bold("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"))
+        console.log(chalk.yellow("Connecting..."))
+        console.log(chalk.gray("██████████████"))
+        console.log(chalk.yellow("Scan QR Code"))
+        console.log("")
+        qrcode.generate(qr, { small: true })
+        console.log("")
+        console.log(chalk.cyan.bold("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"))
+      }
     }
 
     if (connection === "close") {
@@ -101,6 +96,7 @@ export async function startWhatsApp(onMessage, onGroupJoin) {
       const isBadMac = lastDisconnect?.error?.message?.includes("Bad MAC")
       qrDisplayed = false
       pairingDone = false
+      pendingChoice = false
       if (isBadMac) {
         console.log(chalk.red(`Session error - run "npm run clear-session" and restart to fix`))
       } else {
@@ -112,6 +108,7 @@ export async function startWhatsApp(onMessage, onGroupJoin) {
     } else if (connection === "open") {
       qrDisplayed = false
       pairingDone = false
+      pendingChoice = false
       console.log(chalk.cyan.bold("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"))
       console.log(chalk.cyan.bold(BOT_NAME))
       console.log(chalk.cyan.bold("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"))
