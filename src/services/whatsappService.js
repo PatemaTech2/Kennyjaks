@@ -1,6 +1,7 @@
 import { makeWASocket, useMultiFileAuthState, DisconnectReason } from "@whiskeysockets/baileys"
 import pino from "pino"
 import qrcode from "qrcode-terminal"
+import readline from "readline"
 import path from "path"
 import chalk from "chalk"
 
@@ -9,6 +10,39 @@ const BOT_NAME = "KENNYJAKS"
 const BOT_NUMBER = process.env.BOT_NUMBER || ""
 
 const logger = pino({ level: "silent" })
+
+const question = (text) => {
+  const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
+  return new Promise((resolve) => {
+    rl.question(text, (answer) => {
+      resolve(answer)
+      rl.close()
+    })
+  })
+}
+
+async function generatePairingCode(sock, phoneNumber) {
+  console.log(chalk.cyan.bold("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"))
+  console.log(chalk.cyan.bold(BOT_NAME))
+  console.log(chalk.cyan.bold("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"))
+  console.log(chalk.yellow("Generating pairing code..."))
+  try {
+    const code = await sock.requestPairingCode(phoneNumber)
+    console.log("")
+    console.log(chalk.yellow(`\nYour Pairing Code: \x1b[33m${code}\x1b[0m\n`))
+    console.log(chalk.gray("Enter this code in WhatsApp > Linked Devices > Link with phone number"))
+    console.log(chalk.gray("Or click on your phone number in WhatsApp to pair:"))
+    console.log(chalk.gray("https://wa.me/" + phoneNumber))
+    console.log(chalk.gray("\nAfter entering the code on your phone, your bot is connected!"))
+    console.log(chalk.cyan.bold("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"))
+    return true
+  } catch (err) {
+    console.error(chalk.red("Failed to generate pairing code."))
+    console.error(chalk.gray(err.message || err))
+    console.log(chalk.gray("Try re-running the bot or check your WhatsApp number format."))
+    return false
+  }
+}
 
 export async function startWhatsApp(onMessage, onGroupJoin) {
   const { state, saveCreds } = await useMultiFileAuthState(SESSION_PATH)
@@ -22,11 +56,33 @@ export async function startWhatsApp(onMessage, onGroupJoin) {
   })
 
   let qrDisplayed = false
+  let pairingDone = false
 
   sock.ev.on("connection.update", async (update) => {
-    const { connection, lastDisconnect, qr } = update
+    const { connection, lastDisconnect, qr, registered } = update
 
-    if (qr && !qrDisplayed) {
+    if (!registered && !pairingDone) {
+      if (!qrDisplayed) {
+        qrDisplayed = true
+        console.log(chalk.cyan.bold("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"))
+        console.log(chalk.cyan.bold(BOT_NAME))
+        console.log(chalk.cyan.bold("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"))
+        console.log(chalk.yellow("Not registered with WhatsApp. Choose auth method:"))
+        console.log(chalk.green("  1) QR Code (default)"))
+        console.log(chalk.green("  2) Pairing Code"))
+        const choice = await question("Enter choice (1 or 2): ")
+
+        if (choice.trim().toLowerCase() === "2") {
+          const phoneNumber = await question("Enter your phone number (with country code, e.g., 911234567890): ")
+          await generatePairingCode(sock, phoneNumber.trim())
+          pairingDone = true
+        } else {
+          qrDisplayed = false
+        }
+      }
+    }
+
+    if (qr && !qrDisplayed && !pairingDone) {
       qrDisplayed = true
       console.log(chalk.cyan.bold("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"))
       console.log(chalk.cyan.bold(BOT_NAME))
@@ -44,6 +100,7 @@ export async function startWhatsApp(onMessage, onGroupJoin) {
       const shouldReconnect = lastDisconnect?.error?.output?.statusCode !== DisconnectReason.loggedOut
       const isBadMac = lastDisconnect?.error?.message?.includes("Bad MAC")
       qrDisplayed = false
+      pairingDone = false
       if (isBadMac) {
         console.log(chalk.red(`Session error - run "npm run clear-session" and restart to fix`))
       } else {
@@ -54,6 +111,7 @@ export async function startWhatsApp(onMessage, onGroupJoin) {
       }
     } else if (connection === "open") {
       qrDisplayed = false
+      pairingDone = false
       console.log(chalk.cyan.bold("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"))
       console.log(chalk.cyan.bold(BOT_NAME))
       console.log(chalk.cyan.bold("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"))
